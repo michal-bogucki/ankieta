@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="pl">
   <head>
       <meta charset="UTF-8">
@@ -16,202 +16,89 @@
 
           body {
               font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-              background-size: 400% 400%;
-              animation: gradientShift 15s ease infinite;
+              background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #f5d0fe 100%);
               min-height: 100vh;
               display: flex;
               align-items: center;
               justify-content: center;
-              padding: 20px;
-              position: relative;
-              overflow: hidden;
-          }
-
-          @keyframes gradientShift {
-              0% { background-position: 0% 50%; }
-              50% { background-position: 100% 50%; }
-              100% { background-position: 0% 50%; }
-          }
-
-          /* Animated background particles */
-          .particles {
-              position: fixed;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              pointer-events: none;
-              overflow: hidden;
-              z-index: 0;
-          }
-
-          .particle {
-              position: absolute;
-              width: 10px;
-              height: 10px;
-              background: rgba(255, 255, 255, 0.1);
-              border-radius: 50%;
-              animation: float 20s infinite;
-          }
-
-          .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 25s; }
-          .particle:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 20s; }
-          .particle:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 28s; }
-          .particle:nth-child(4) { left: 40%; animation-delay: 1s; animation-duration: 22s; }
-          .particle:nth-child(5) { left: 50%; animation-delay: 3s; animation-duration: 26s; }
-          .particle:nth-child(6) { left: 60%; animation-delay: 5s; animation-duration: 21s; }
-          .particle:nth-child(7) { left: 70%; animation-delay: 2s; animation-duration: 24s; }
-          .particle:nth-child(8) { left: 80%; animation-delay: 4s; animation-duration: 27s; }
-          .particle:nth-child(9) { left: 90%; animation-delay: 1s; animation-duration: 23s; }
-
-          @keyframes float {
-              0% {
-                  transform: translateY(100vh) rotate(0deg);
-                  opacity: 0;
-              }
-              10% {
-                  opacity: 1;
-              }
-              90% {
-                  opacity: 1;
-              }
-              100% {
-                  transform: translateY(-100vh) rotate(720deg);
-                  opacity: 0;
-              }
+              padding: 15px;
           }
 
           .container {
-              background: rgba(255, 255, 255, 0.95);
-              backdrop-filter: blur(20px);
-              border-radius: 24px;
-              padding: 50px 40px;
-              max-width: 480px;
+              background: white;
+              border-radius: 20px;
+              padding: 35px 40px;
+              max-width: 620px;
               width: 100%;
               box-shadow:
-                  0 25px 80px rgba(0, 0, 0, 0.25),
-                  0 0 0 1px rgba(255, 255, 255, 0.2),
-                  inset 0 1px 0 rgba(255, 255, 255, 0.8);
+                  0 4px 6px rgba(0, 0, 0, 0.02),
+                  0 12px 24px rgba(0, 0, 0, 0.06),
+                  0 0 0 1px rgba(0, 0, 0, 0.03);
               text-align: center;
-              position: relative;
-              z-index: 1;
-              animation: slideUp 0.6s ease-out;
           }
 
-          @keyframes slideUp {
-              from {
-                  opacity: 0;
-                  transform: translateY(30px);
-              }
-              to {
-                  opacity: 1;
-                  transform: translateY(0);
-              }
-          }
-
+          /* Ikona kwiat + serce */
           .icon-wrapper {
-              width: 90px;
-              height: 90px;
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-              border-radius: 50%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin: 0 auto 25px;
-              box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-              animation: pulse 2s ease-in-out infinite;
+              width: 80px;
+              height: 80px;
+              margin: 0 auto 20px;
+              position: relative;
           }
 
-          @keyframes pulse {
-              0%, 100% { transform: scale(1); }
-              50% { transform: scale(1.05); }
-          }
-
-          .icon {
-              font-size: 40px;
-              filter: grayscale(1) brightness(10);
+          .flower-icon {
+              width: 100%;
+              height: 100%;
           }
 
           h1 {
-              color: #1a1a2e;
-              margin-bottom: 12px;
-              font-size: 32px;
+              color: #1f2937;
+              margin-bottom: 8px;
+              font-size: 26px;
               font-weight: 700;
-              letter-spacing: -0.5px;
           }
 
           .description {
-              color: #64748b;
-              margin-bottom: 35px;
-              line-height: 1.7;
-              font-size: 16px;
+              color: #6b7280;
+              margin-bottom: 25px;
+              line-height: 1.6;
+              font-size: 15px;
           }
 
           .btn {
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              background: linear-gradient(135deg, #ec4899 0%, #d946ef 100%);
               color: white;
               border: none;
-              padding: 18px 45px;
-              font-size: 17px;
+              padding: 14px 32px;
+              font-size: 15px;
               font-weight: 600;
-              border-radius: 60px;
+              border-radius: 50px;
               cursor: pointer;
-              transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+              transition: all 0.25s ease;
               display: inline-flex;
               align-items: center;
-              gap: 10px;
+              gap: 8px;
               text-decoration: none;
-              box-shadow: 0 8px 30px rgba(102, 126, 234, 0.35);
-              position: relative;
-              overflow: hidden;
-          }
-
-          .btn::before {
-              content: '';
-              position: absolute;
-              top: 0;
-              left: -100%;
-              width: 100%;
-              height: 100%;
-              background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-              transition: left 0.5s;
-          }
-
-          .btn:hover::before {
-              left: 100%;
+              box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
           }
 
           .btn:hover {
-              transform: translateY(-4px);
-              box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
-          }
-
-          .btn:active {
               transform: translateY(-2px);
-          }
-
-          .btn:disabled {
-              background: #cbd5e1;
-              cursor: not-allowed;
-              transform: none;
-              box-shadow: none;
+              box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
           }
 
           .loading {
               display: none;
-              margin-top: 20px;
-              padding: 30px;
+              padding: 20px;
           }
 
           .spinner {
-              width: 50px;
-              height: 50px;
-              border: 4px solid #e2e8f0;
-              border-top: 4px solid #667eea;
+              width: 36px;
+              height: 36px;
+              border: 3px solid #fce7f3;
+              border-top: 3px solid #ec4899;
               border-radius: 50%;
               animation: spin 0.8s linear infinite;
-              margin: 0 auto 20px;
+              margin: 0 auto 12px;
           }
 
           @keyframes spin {
@@ -220,183 +107,142 @@
           }
 
           .loading p {
-              color: #64748b;
-              font-size: 15px;
+              color: #6b7280;
+              font-size: 14px;
           }
 
+          /* Sukces - kompaktowy layout */
           .message {
-              margin-top: 25px;
-              padding: 30px;
-              border-radius: 16px;
+              margin-top: 20px;
               display: none;
-              animation: fadeIn 0.4s ease-out;
-          }
-
-          @keyframes fadeIn {
-              from { opacity: 0; transform: scale(0.95); }
-              to { opacity: 1; transform: scale(1); }
           }
 
           .message.error {
-              background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+              background: #fef2f2;
               color: #dc2626;
+              padding: 16px;
+              border-radius: 12px;
               border: 1px solid #fecaca;
           }
 
-          .message.success {
-              background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-              color: #166534;
-              border: 1px solid #bbf7d0;
-          }
-
-          .success-icon {
-              width: 60px;
-              height: 60px;
-              background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-              border-radius: 50%;
+          .success-content {
               display: flex;
               align-items: center;
-              justify-content: center;
-              margin: 0 auto 20px;
-              font-size: 28px;
-              box-shadow: 0 8px 25px rgba(34, 197, 94, 0.35);
-              animation: successPop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+              gap: 20px;
+              background: linear-gradient(135deg, #fdf4ff 0%, #fdf2f8 100%);
+              padding: 20px 25px;
+              border-radius: 16px;
+              border: 1px solid #f5d0fe;
           }
 
-          @keyframes successPop {
-              0% { transform: scale(0); }
-              100% { transform: scale(1); }
+          .success-left {
+              flex: 1;
+              text-align: left;
+          }
+
+          .success-label {
+              font-size: 12px;
+              color: #9ca3af;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+              margin-bottom: 6px;
           }
 
           .code-display {
-              font-size: 32px;
+              font-size: 24px;
               font-weight: 700;
-              color: #667eea;
-              background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
-              padding: 20px 30px;
-              border-radius: 16px;
-              margin: 20px 0;
-              letter-spacing: 3px;
-              display: inline-block;
-              border: 2px dashed #a5b4fc;
-              position: relative;
+              color: #a855f7;
+              letter-spacing: 2px;
               cursor: pointer;
-              transition: all 0.3s ease;
+              transition: color 0.2s;
           }
 
           .code-display:hover {
-              background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
-          }
-
-          .code-display::after {
-              content: 'Kliknij aby skopiowac';
-              position: absolute;
-              bottom: -25px;
-              left: 50%;
-              transform: translateX(-50%);
-              font-size: 11px;
-              color: #94a3b8;
-              font-weight: 400;
-              letter-spacing: 0;
-              opacity: 0.8;
+              color: #9333ea;
           }
 
           .code-hint {
-              font-size: 14px;
-              color: #64748b;
-              margin: 15px 0;
-              line-height: 1.6;
+              font-size: 11px;
+              color: #9ca3af;
+              margin-top: 4px;
+          }
+
+          .success-right {
+              flex-shrink: 0;
           }
 
           .btn-link {
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
               color: white;
               border: none;
-              padding: 16px 35px;
-              font-size: 16px;
+              padding: 12px 24px;
+              font-size: 14px;
               font-weight: 600;
-              border-radius: 60px;
+              border-radius: 50px;
               cursor: pointer;
               text-decoration: none;
               display: inline-flex;
               align-items: center;
-              gap: 8px;
-              margin-top: 20px;
-              transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-              box-shadow: 0 8px 25px rgba(102, 126, 234, 0.35);
+              gap: 6px;
+              transition: all 0.25s ease;
+              box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+              white-space: nowrap;
           }
 
           .btn-link:hover {
-              transform: translateY(-3px);
-              box-shadow: 0 12px 35px rgba(102, 126, 234, 0.45);
+              transform: translateY(-2px);
+              box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
           }
 
+          /* Info box - kompaktowy */
           .info-box {
-              background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-              border-radius: 16px;
-              padding: 25px;
-              margin-top: 30px;
-              text-align: left;
-              border: 1px solid #e2e8f0;
+              display: flex;
+              justify-content: center;
+              gap: 30px;
+              margin-top: 25px;
+              padding-top: 20px;
+              border-top: 1px solid #f3f4f6;
           }
 
-          .info-box h3 {
-              color: #334155;
-              margin-bottom: 15px;
-              font-size: 15px;
-              font-weight: 600;
+          .info-item {
               display: flex;
               align-items: center;
               gap: 8px;
-          }
-
-          .info-box ul {
-              color: #64748b;
-              margin-left: 0;
-              font-size: 14px;
-              line-height: 2;
-              list-style: none;
-          }
-
-          .info-box li {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-          }
-
-          .info-box li::before {
-              content: '';
-              width: 6px;
-              height: 6px;
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-              border-radius: 50%;
-              flex-shrink: 0;
-          }
-
-          .footer {
-              margin-top: 30px;
-              color: #94a3b8;
+              color: #6b7280;
               font-size: 13px;
           }
 
+          .info-icon {
+              width: 18px;
+              height: 18px;
+              color: #d946ef;
+          }
+
+          .footer {
+              margin-top: 20px;
+              color: #9ca3af;
+              font-size: 12px;
+          }
+
+          /* Toast */
           .copied-toast {
               position: fixed;
-              bottom: 30px;
+              bottom: 20px;
               left: 50%;
-              transform: translateX(-50%) translateY(100px);
-              background: #1e293b;
+              transform: translateX(-50%) translateY(80px);
+              background: #1f2937;
               color: white;
-              padding: 14px 28px;
-              border-radius: 12px;
-              font-size: 14px;
+              padding: 12px 20px;
+              border-radius: 10px;
+              font-size: 13px;
               font-weight: 500;
-              box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+              box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
               z-index: 1000;
               opacity: 0;
-              transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+              transition: all 0.3s ease;
               display: flex;
               align-items: center;
-              gap: 10px;
+              gap: 8px;
           }
 
           .copied-toast.show {
@@ -405,83 +251,129 @@
           }
 
           /* Responsive */
-          @media (max-width: 480px) {
+          @media (max-width: 600px) {
               .container {
-                  padding: 35px 25px;
+                  padding: 25px 20px;
               }
 
-              h1 {
-                  font-size: 26px;
+              .success-content {
+                  flex-direction: column;
+                  text-align: center;
+                  gap: 15px;
+                  padding: 20px;
+              }
+
+              .success-left {
+                  text-align: center;
+              }
+
+              .info-box {
+                  flex-direction: column;
+                  gap: 12px;
+                  align-items: center;
               }
 
               .code-display {
-                  font-size: 24px;
-                  padding: 15px 20px;
-                  letter-spacing: 2px;
-              }
-
-              .btn, .btn-link {
-                  padding: 16px 30px;
-                  font-size: 15px;
+                  font-size: 20px;
               }
           }
       </style>
   </head>
   <body>
-      <!-- Animated background particles -->
-      <div class="particles">
-          <div class="particle"></div>
-          <div class="particle"></div>
-          <div class="particle"></div>
-          <div class="particle"></div>
-          <div class="particle"></div>
-          <div class="particle"></div>
-          <div class="particle"></div>
-          <div class="particle"></div>
-          <div class="particle"></div>
-      </div>
-
       <div class="container">
+          <!-- Ikona kwiat z sercem -->
           <div class="icon-wrapper">
-              <div class="icon">📋</div>
+              <svg class="flower-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Platki kwiatu -->
+                  <ellipse cx="50" cy="25" rx="18" ry="22" fill="url(#petal1)" opacity="0.9"/>
+                  <ellipse cx="75" cy="40" rx="18" ry="22" fill="url(#petal2)" opacity="0.85" transform="rotate(60 75 40)"/>
+                  <ellipse cx="70" cy="68" rx="18" ry="22" fill="url(#petal3)" opacity="0.8" transform="rotate(120 70 68)"/>
+                  <ellipse cx="30" cy="68" rx="18" ry="22" fill="url(#petal4)" opacity="0.8" transform="rotate(-120 30 68)"/>
+                  <ellipse cx="25" cy="40" rx="18" ry="22" fill="url(#petal5)" opacity="0.85" transform="rotate(-60 25 40)"/>
+
+                  <!-- Srodek - serce -->
+                  <path d="M50 38 C50 38, 42 30, 35 33 C28 36, 28 46, 35 52 L50 65 L65 52 C72 46, 72 36, 65 33 C58 30, 50 38, 50 38Z"
+                        fill="url(#heart)" />
+
+                  <!-- Gradienty -->
+                  <defs>
+                      <linearGradient id="petal1" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#f9a8d4"/>
+                          <stop offset="100%" stop-color="#f472b6"/>
+                      </linearGradient>
+                      <linearGradient id="petal2" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#f0abfc"/>
+                          <stop offset="100%" stop-color="#e879f9"/>
+                      </linearGradient>
+                      <linearGradient id="petal3" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#c4b5fd"/>
+                          <stop offset="100%" stop-color="#a78bfa"/>
+                      </linearGradient>
+                      <linearGradient id="petal4" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#c4b5fd"/>
+                          <stop offset="100%" stop-color="#a78bfa"/>
+                      </linearGradient>
+                      <linearGradient id="petal5" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#f0abfc"/>
+                          <stop offset="100%" stop-color="#e879f9"/>
+                      </linearGradient>
+                      <linearGradient id="heart" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#ec4899"/>
+                          <stop offset="100%" stop-color="#db2777"/>
+                      </linearGradient>
+                  </defs>
+              </svg>
           </div>
+
           <h1>Ankieta badawcza</h1>
           <p class="description">
-              Kliknij poniższy przycisk, aby otrzymac jednorazowy kod dostepu do ankiety.
+              Kliknij przycisk poniżej, aby otrzymać kod dostępu do ankiety.
           </p>
 
           <button class="btn" id="getAccessBtn" onclick="getAccess()">
-              <span>Pobierz dostep do ankiety</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              <span>Pobierz dostęp do ankiety</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
           </button>
 
           <div class="loading" id="loading">
               <div class="spinner"></div>
-              <p>Generowanie dostepu...</p>
+              <p>Generowanie dostępu...</p>
           </div>
 
           <div class="message" id="message"></div>
 
           <div class="info-box">
-              <h3>Informacje</h3>
-              <ul>
-                  <li>Kazda osoba moze wypelnic ankiete tylko raz</li>
-                  <li>Ankieta jest anonimowa</li>
-                  <li>Wypelnienie zajmie okolo 3-5 minut</li>
-              </ul>
+              <div class="info-item">
+                  <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <path d="M12 6v6l4 2"/>
+                  </svg>
+                  <span>3-5 minut</span>
+              </div>
+              <div class="info-item">
+                  <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                  <span>Anonimowa</span>
+              </div>
+              <div class="info-item">
+                  <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                  </svg>
+                  <span>Jednorazowa</span>
+              </div>
           </div>
 
           <p class="footer">
-              W razie problemow skontaktuj sie z organizatorem ankiety.
+              W razie problemów skontaktuj się z organizatorem badania.
           </p>
       </div>
 
-      <!-- Toast notification -->
       <div class="copied-toast" id="toast">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
           Kod skopiowany!
@@ -513,18 +405,21 @@
 
                   message.className = 'message success';
                   message.innerHTML = `
-                      <div class="success-icon">✓</div>
-                      <strong style="font-size: 18px;">Dostep przyznany!</strong>
-                      <p class="code-hint">Twoj kod dostepu:</p>
-                      <div class="code-display" onclick="copyCode()" title="Kliknij aby skopiowac">${currentCode}</div>
-                      <p class="code-hint"><strong>Zapamietaj ten kod!</strong><br>W ankiecie wybierz go z listy.</p>
-                      <a href="${formUrl}" target="_blank" class="btn-link">
-                          Przejdz do ankiety
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                              <line x1="5" y1="12" x2="19" y2="12"></line>
-                              <polyline points="12 5 19 12 12 19"></polyline>
-                          </svg>
-                      </a>
+                      <div class="success-content">
+                          <div class="success-left">
+                              <div class="success-label">Twój kod dostępu</div>
+                              <div class="code-display" onclick="copyCode()" title="Kliknij aby skopiować">${currentCode}</div>
+                              <div class="code-hint">Kliknij kod aby skopiować • Wybierz go w ankiecie</div>
+                          </div>
+                          <div class="success-right">
+                              <a href="${formUrl}" target="_blank" class="btn-link">
+                                  Przejdź do ankiety
+                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                                  </svg>
+                              </a>
+                          </div>
+                      </div>
                   `;
                   message.style.display = 'block';
 
@@ -533,7 +428,7 @@
                   btn.style.display = 'inline-flex';
 
                   message.className = 'message error';
-                  message.innerHTML = `<strong>Wystapil blad.</strong><br><br>Sprobuj odswiezyc strone.`;
+                  message.innerHTML = `<strong>Wystąpił błąd.</strong> Spróbuj odświeżyć stronę.`;
                   message.style.display = 'block';
               }
           }
